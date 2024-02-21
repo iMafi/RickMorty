@@ -1,0 +1,10 @@
+{
+  "/character": {
+    "target": "https://rickandmortyapi.com/api/character",
+    "pathRewrite": {
+      "/character": ""
+    },
+    "secure": false,
+    "changeOrigin": true
+  }
+}

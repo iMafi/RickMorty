@@ -1,0 +1,18 @@
+.error-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  button {
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--green-color);
+    border: 1px solid var(--gray-dark-color);
+    color: var(--white-color);
+    &:hover:not([disabled]) {
+      background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+    }
+  }
+}

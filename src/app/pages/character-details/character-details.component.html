@@ -1,0 +1,28 @@
+
+<main>
+  <a [routerLink]="['/list']">All characters</a> >> <span>{{ character.name }}</span>
+  <div class="details-container">
+    <app-character-card
+      [pictureUrl]="character.image"
+      [name]="character.name"
+    ></app-character-card>
+    <div>
+      <button [ngClass]="{'show-btn': !showInfo, 'hide-btn': showInfo}"  (click)="toggleInfo()">{{ infoBtnText }}</button>
+      <div class="info-container" [@showHide]="showInfo ? 'show' : 'hide'">
+        <p>
+          <span>Status:</span>
+          <span [ngClass]="{
+              dead: character.status === 'Dead',
+              alive: character.status === 'Alive'
+            }"> {{ character.status }}</span>
+        </p>
+        <p>
+          <span>Species:</span> {{ character.species }}
+        </p>
+        <p>
+          <span>Origin:</span> {{ character.origin.name }}
+        </p>
+      </div>
+    </div>
+  </div>
+</main>

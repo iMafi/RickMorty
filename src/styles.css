@@ -1,0 +1,28 @@
+:root {
+  /* Palette */
+  --white-color: #fff;
+  --black-color: #42413d;
+  --gray-color: #f6f5f1;
+  --gray-dark-color: #d6d5d2;
+  --green-color: #20ae44;
+  --red-color: #ff6124;
+  --yellow-color: #fae361;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid lightblue;
+  border-right-color: orange;
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background: var(--gray-color);
+}
+
+p {
+}

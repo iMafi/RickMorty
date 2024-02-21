@@ -1,0 +1,44 @@
+<div class="loader-container" *ngIf="(loading$ | async)">
+  <div class="loader"></div>
+  Loading...
+</div>
+
+
+
+<main class="content-container">
+  <form [formGroup]="form">
+    <label>
+      Search by Name
+      <input type="text" formControlName="search" id="searchByName" />
+    </label>
+  </form>
+
+  <div class="main">
+    <div class="characters-container">
+      <div *ngFor="let char of charList" title="View details of {{ char.name }}">
+        <a [routerLink]="['/details', char.id]">
+          <app-character-card
+            [name]="char.name"
+            [pictureUrl]="char.image"
+            [width]="200"
+            [height]="200"
+          ></app-character-card>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <button class="navigation-btn" [disabled]="!pageParams.prev" (click)="jumpToPage('prev')">
+    &laquo; 1
+  </button>
+  <button class="navigation-btn" [disabled]="!pageParams.prev" (click)="navigateToPage('prev')">
+    &#8249;
+  </button>
+  <button class="navigation-btn" [disabled]="!pageParams.next" (click)="navigateToPage('next')">
+    &#8250;
+  </button>
+  <button class="navigation-btn" [disabled]="!pageParams.next" (click)="jumpToPage('next')">
+   {{ pageParams.pages }} &raquo;
+  </button>
+</footer>

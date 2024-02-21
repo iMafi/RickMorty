@@ -1,0 +1,44 @@
+main {
+  margin: 10px;
+  .details-container {
+    display: flex;
+
+    p {
+      color: var(--black-color);
+
+      span {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+      .alive {
+        color: var(--green-color);
+      }
+      .dead {
+        color: var(--red-color);
+      }
+    }
+    button {
+      font-size: 1rem;
+      padding: 5px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      &.show-btn {
+        color: var(--white-color);
+        background-color: var(--green-color);
+      }
+      &.hide-btn {
+        background-color: var(--gray-dark-color);
+        color: var(--black-color);
+      }
+      &:hover {
+        background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+      }
+    }
+    .info-container {
+      background: var(--gray-dark-color);
+      padding: 10px;
+      margin-top: 10px;
+    }
+  }
+}
