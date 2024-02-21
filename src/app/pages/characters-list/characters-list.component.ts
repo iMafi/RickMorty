@@ -37,11 +37,13 @@ export class CharactersListComponent implements OnInit, OnDestroy {
   pageParams: {
     next: string | null,
     prev: string | null,
-    pages: number
+    pages: number,
+    count: number,
   } = {
     next: null,
     prev: null,
-    pages: 0
+    pages: 0,
+    count: 0
   };
   destroy$: Subject<void> = new Subject<void>();
   constructor(private readonly charactersService: CharactersService,
@@ -110,6 +112,7 @@ export class CharactersListComponent implements OnInit, OnDestroy {
     this.pageParams.prev = info.prev ? info.prev.split('?')[1] : null;
     this.pageParams.next = info.next ? info.next.split('?')[1] : null;
     this.pageParams.pages = info.pages;
+    this.pageParams.count = info.count;
   }
 
   private getAllCharacters(params?: string): void {

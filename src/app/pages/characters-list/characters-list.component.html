@@ -29,16 +29,19 @@
   </div>
 </main>
 <footer>
-  <button class="navigation-btn" [disabled]="!pageParams.prev" (click)="jumpToPage('prev')">
-    &laquo; 1
-  </button>
-  <button class="navigation-btn" [disabled]="!pageParams.prev" (click)="navigateToPage('prev')">
-    &#8249;
-  </button>
-  <button class="navigation-btn" [disabled]="!pageParams.next" (click)="navigateToPage('next')">
-    &#8250;
-  </button>
-  <button class="navigation-btn" [disabled]="!pageParams.next" (click)="jumpToPage('next')">
-   {{ pageParams.pages }} &raquo;
-  </button>
+  <div class="btn-container">
+    <button class="navigation-btn" [disabled]="!pageParams.prev" (click)="jumpToPage('prev')">
+      &laquo; 1
+    </button>
+    <button class="navigation-btn" [disabled]="!pageParams.prev" (click)="navigateToPage('prev')">
+      &#8249;
+    </button>
+    <button class="navigation-btn" [disabled]="!pageParams.next" (click)="navigateToPage('next')">
+      &#8250;
+    </button>
+    <button class="navigation-btn" [disabled]="!pageParams.next" (click)="jumpToPage('next')">
+     {{ pageParams.pages }} &raquo;
+    </button>
+  </div>
+  <h4>Total count: {{ pageParams.count }}</h4>
 </footer>

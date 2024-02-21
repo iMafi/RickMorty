@@ -49,20 +49,27 @@ input {
 
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 5vh;
   padding: 10px;
-  .navigation-btn {
-    margin: 8px 5px;
-    background: var(--gray-dark-color);
-    border: 1px solid var(--gray-dark-color);
-    width: 50px;
-    height: 35px;
-    border-radius: 4px;
-    cursor: pointer;
-    &:hover:not([disabled]) {
-      background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  .btn-container {
+    margin-top: 8px;
+    .navigation-btn {
+      margin: 0 5px;
+      background: var(--gray-dark-color);
+      border: 1px solid var(--gray-dark-color);
+      width: 50px;
+      height: 35px;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover:not([disabled]) {
+        background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+      }
     }
+  }
+  h4 {
+    margin-top: 5px;
   }
 }
